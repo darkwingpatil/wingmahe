@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mahe website</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div class="header">
+        <img src="./Screenshot 2023-08-05 150344.png"/>
+        <p>AKASH P PATIL</p>
+    </div>
+    <img class="second-div" src="./seconddivwing.png" >
+     <a class="click-area" id="load-content"></a>
+    </img>
+    <img id="third-div"class="third-div" src="./thisradiv.png"/>
+    <div id="onloaded" class="headerdup">
+        <p>Profile</p>
+        <hr/>
+        <p>Log out</p>
+    </div>
+    <div id="overlay" class="overlay">
+        <div class="loader"></div>
+    </div>
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+    var isblockdiv=false;
+    var loadContentButton = document.getElementById("load-content");
+    var bottomContent = document.getElementById("bottom-content");
+    var thirddiv = document.getElementById("third-div");
+
+    thirddiv.addEventListener("click",()=>{
+        document.getElementById("overlay").style.display="block"
+    })
+
+    loadContentButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        if(isblockdiv==false){
+            isblockdiv=true;
+            document.getElementById("onloaded").style.display="block"
+        }
+        else{
+            isblockdiv=false;
+            document.getElementById("onloaded").style.display="none"
+        }
+    });
+});
+</script>
+</html>
